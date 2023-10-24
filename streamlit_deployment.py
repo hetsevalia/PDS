@@ -5,98 +5,27 @@ from joblib import load
 # Page Configuration
 st.set_page_config(page_title="Obesity Prediction", layout="wide", page_icon=":chart_with_upwards_trend:")
 
-# Sidebar for theme selection
-st.sidebar.title("Settings")
-theme_selection = st.sidebar.radio("Choose a theme", ["Light", "Dark"])
-
-if theme_selection == "Light":
-    # Custom CSS for light theme
-    custom_css = """
+custom_css = """
+/* Light theme styles */
+@media (prefers-color-scheme: light) {
     .reportview-container {
         background-color: #f5f5f5;
         font-family: 'Helvetica Neue', sans-serif;
     }
+    /*... other light theme styles ...*/
+}
 
-    .big-font {
-        font-size:24px !important;
-        color: #4a4a4a;
-    }
-
-    .small-font {
-        font-size:18px !important;
-        color: #7a7a7a;
-    }
-
-    h1 {
-        color: #ff6347;
-        font-weight: bold;
-    }
-
-    .stButton>button {
-        color: #f5f5f5;
-        background-color: #ff6347;
-        border-radius: 5px;
-        border: none;
-        font-weight: bold;
-    }
-
-    .stTextInput>div>div>input, .stNumberInput>div>div>input, .stSelectbox>div>div>select {
-        border-radius: 5px;
-        border: 1px solid #e0e0e0;
-    }
-
-    .stMarkdown {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    }
-    """
-else:
-    # Custom CSS for dark theme
-    custom_css = """
+/* Dark theme styles */
+@media (prefers-color-scheme: dark) {
     .reportview-container {
         background-color: #1f1f1f;
         font-family: 'Helvetica Neue', sans-serif;
     }
+    /*... other dark theme styles ...*/
+}
+"""
 
-    .big-font {
-        font-size:24px !important;
-        color: #cfcfcf;
-    }
-
-    .small-font {
-        font-size:18px !important;
-        color: #7a7a7a;
-    }
-
-    h1 {
-        color: #ff6347;
-        font-weight: bold;
-    }
-
-    .stButton>button {
-        color: #1f1f1f;
-        background-color: #ff6347;
-        border-radius: 5px;
-        border: none;
-        font-weight: bold;
-    }
-
-    .stTextInput>div>div>input, .stNumberInput>div>div>input, .stSelectbox>div>div>select {
-        border-radius: 5px;
-        border: 1px solid #4a4a4a;
-        background-color: #2f2f2f;
-        color: #cfcfcf;
-    }
-
-    .stMarkdown {
-        background-color: #2f2f2f;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    }
-    """
+st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 

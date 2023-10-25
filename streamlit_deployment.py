@@ -3,7 +3,7 @@ import pandas as pd
 from joblib import load
 
 # Page Configuration
-st.set_page_config(page_title="Obesity Prediction", layout="wide", page_icon=":chart_with_upwards_trend:")
+st.set_page_config(page_title="Predicting Obesity: Diet and Exercise Tell All", layout="wide", page_icon=":chart_with_upwards_trend:")
 
 # Sidebar for theme selection
 st.sidebar.title("Settings")

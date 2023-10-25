@@ -108,9 +108,7 @@ model_files = {
     "KNN": "KNN.pkl",
     "Logistic Regression": "Logistic Regression.pkl",
     "Naive Bayes": "Naive Bayes.pkl",
-    "SVM": "SVM.pkl",
     "Random Forest": "Random Forest.pkl",
-    "Decision Tree": "Decision Tree.pkl",
     "Gradient Boosting": "Gradient Boosting.pkl"
 }
 

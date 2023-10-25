@@ -100,7 +100,7 @@ else:
 
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
-st.markdown("# Obesity Prediction")
+st.markdown("# Predicting Obesity: Diet and Exercise Tell All")
 st.markdown("### Please provide the following information to predict obesity level:")
 
 # Load pre-trained models
